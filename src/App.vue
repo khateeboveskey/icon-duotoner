@@ -1,9 +1,11 @@
 <template>
-	<div class="h-screen m-5 grid place-items-center">
+	<div class="m-5 grid h-screen place-items-center">
 		<div>
-			<h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight mb-10">🎨 Icon Duotoner</h1>
+			<h1 class="mb-10 scroll-m-20 text-4xl font-extrabold tracking-tight">
+				🎨 Icon Duotoner
+			</h1>
 			<label for="file-uploader">
-				<Upload class="inline w-4 me-2" />
+				<Upload class="inline me-2 w-4" />
 				Choose an SVG file
 			</label>
 			<input class="hidden" id="file-uploader" type="file" accept="image/svg+xml" />
@@ -16,7 +18,7 @@ import { Upload } from 'lucide-vue-next';
 </script>
 
 <style scoped>
-label[for="file-uploader"] {
-	@apply hover:cursor-pointer w-full h-24 flex items-center justify-center border border-slate-200 bg-white shadow-sm hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50 px-4 py-2 rounded-md
+label[for='file-uploader'] {
+	@apply flex h-24 w-full items-center justify-center rounded-md border border-slate-200 bg-white px-4 py-2 shadow-sm hover:cursor-pointer hover:bg-slate-100 hover:text-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50;
 }
 </style>
