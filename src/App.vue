@@ -4,17 +4,25 @@
 			<h1 class="mb-10 scroll-m-20 text-4xl font-extrabold tracking-tight">
 				🎨 Icon Duotoner
 			</h1>
-			<label for="file-uploader">
-				<Upload class="inline me-2 w-4" />
-				Choose an SVG file
-			</label>
-			<input class="hidden" id="file-uploader" type="file" accept="image/svg+xml" />
+			<form class="flex flex-col gap-4">
+				<label for="file-uploader">
+					<Upload class="inline me-2 w-4" />
+					Choose an SVG file
+				</label>
+				<input class="hidden" id="file-uploader" type="file" accept="image/svg+xml" />
+				<label for="tone-opacity-slider">Secondary Tone Opacity</label>
+				<Slider id="tone-opacity-slider" :default-value="[5]" :max="10" />
+			</form>
 		</div>
 	</div>
 </template>
 
 <script setup>
+// Icons
 import { Upload } from 'lucide-vue-next';
+
+// Components
+import Slider from './components/ui/slider/Slider.vue';
 </script>
 
 <style scoped>
